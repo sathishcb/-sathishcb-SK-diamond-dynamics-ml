@@ -1,5 +1,12 @@
 # Diamond Dynamics – Price Prediction & Market Segmentation
 
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange?logo=scikitlearn)
+![Deep Learning](https://img.shields.io/badge/Deep%20Learning-TensorFlow-red?logo=tensorflow)
+![Deployment](https://img.shields.io/badge/Deployment-Streamlit-brightgreen?logo=streamlit)
+![Status](https://img.shields.io/badge/Project-Completed-success)
+
+
 An end-to-end Machine Learning and Deep Learning project to predict diamond prices and segment diamonds into meaningful market categories.  
 The project is deployed using a Streamlit web application.
 
