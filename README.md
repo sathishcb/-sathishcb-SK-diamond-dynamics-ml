@@ -147,6 +147,7 @@ The following models were trained and evaluated:
 ### Run the App
 
 📁 Project Structure
+```text
 diamond-dynamics-ml/
 │
 ├── data/
@@ -163,7 +164,7 @@ diamond-dynamics-ml/
 │   └── Diamond_Dynamics.ipynb
 │
 └── app.py
-
+```
 🚀 Real-World Applications
 
 Dynamic pricing for diamond retailers
