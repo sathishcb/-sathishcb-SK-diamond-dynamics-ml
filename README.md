@@ -1,146 +1,153 @@
-💎 Diamond Dynamics: Price Prediction & Market Segmentation
+# Diamond Dynamics – Price Prediction & Market Segmentation
 
-An end-to-end Machine Learning + Deep Learning project that predicts diamond prices and segments diamonds into market categories using clustering. The solution is deployed as an interactive Streamlit web app.
+An end-to-end Machine Learning and Deep Learning project to predict diamond prices and segment diamonds into meaningful market categories.  
+The project is deployed using a Streamlit web application.
 
-📌 Problem Statement
+---
 
-Diamond pricing depends on multiple quality attributes such as carat, cut, color, clarity, and dimensions.
-This project builds ML models to:
+## 📌 Project Overview
 
-✔ Predict diamond price
-✔ Segment diamonds into market groups
-✔ Provide an interactive tool for pricing and classification
+Diamond pricing depends on several quality attributes such as carat, cut, color, clarity, and dimensions.  
+This project solves two key business problems:
 
-🎯 Objectives
+- Predicting diamond prices accurately
+- Segmenting diamonds into market groups for better pricing and inventory decisions
 
-Build regression models to predict diamond price
+---
 
-Build an ANN model for comparison
+## 🎯 Objectives
 
-Perform market segmentation using K-Means clustering
+- Build multiple regression models for price prediction
+- Build an Artificial Neural Network (ANN) model
+- Perform market segmentation using K-Means clustering
+- Visualize clusters using PCA
+- Deploy predictions using a Streamlit web app
 
-Use PCA for cluster visualization
+---
 
-Deploy everything using Streamlit
+## 🧠 Skills & Concepts Used
 
-🧠 Skills Demonstrated
+- Data Cleaning & Preprocessing  
+- Exploratory Data Analysis (EDA)  
+- Outlier & Skewness Handling  
+- Feature Engineering  
+- Feature Selection  
+- Machine Learning Regression  
+- Artificial Neural Networks (ANN)  
+- K-Means Clustering  
+- PCA (Dimensionality Reduction)  
+- Streamlit Deployment  
 
-Data Cleaning & Preprocessing
+---
 
-Exploratory Data Analysis (EDA)
+## 📊 Dataset Information
 
-Feature Engineering
+| Property | Value |
+|--------|------|
+| Dataset | Diamonds Dataset |
+| Rows | 53,940 |
+| Columns | 10 |
 
-Outlier & Skewness Handling
+### Main Columns
 
-Feature Selection
+| Column | Description |
+|------|-------------|
+| carat | Weight of the diamond |
+| cut | Cut quality (Fair → Ideal) |
+| color | Color grade (D best → J worst) |
+| clarity | Inclusion quality |
+| x, y, z | Dimensions in mm |
+| price | Price in USD (converted to INR) |
 
-Machine Learning Regression
+---
 
-Artificial Neural Networks (ANN)
+## 🧹 Data Preprocessing
 
-K-Means Clustering
+- Removed invalid values (0 in x, y, z)
+- Handled missing values
+- Converted price from USD to INR
+- Removed outliers using IQR method
+- Checked skewness of numerical features
 
-PCA (Dimensionality Reduction)
+---
 
-Streamlit Web App Deployment
+## 📈 Exploratory Data Analysis (EDA)
 
-📊 Dataset Information
+- Price distribution plots
+- Carat vs price relationship
+- Price vs cut, color, clarity
+- Correlation heatmap
+- Scatter plots and boxplots
 
-Rows: 53,940
+---
 
-Features: 10
+## 🧩 Feature Engineering
 
-Source: Diamonds Dataset
+Derived new features to improve model performance:
 
-Key Columns
-Feature	Description
-carat	Weight of diamond
-cut	Cut quality (Fair → Ideal)
-color	Color grade (D best → J worst)
-clarity	Inclusion grade
-x, y, z	Dimensions in mm
-price	Price in USD (converted to INR)
-🧹 Data Preprocessing
+- Volume = x × y × z
+- Price per Carat
+- Dimension Ratio
+- Carat Category (Light / Medium / Heavy)
 
-Removed invalid dimension values (0 in x, y, z)
+---
 
-Handled missing values
+## 🎯 Feature Selection
 
-Converted price from USD → INR
+- Used Random Forest feature importance
+- Selected the most influential features for modeling
 
-Removed outliers using IQR method
+---
 
-Checked skewness in numerical features
+## 🤖 Regression Models
 
-📈 Exploratory Data Analysis
+The following models were trained and evaluated:
 
-Price distribution plots
+- Linear Regression  
+- Decision Tree Regressor  
+- Random Forest Regressor (Best Model)  
+- K-Nearest Neighbors (KNN)  
+- XGBoost Regressor  
+- Artificial Neural Network (ANN)  
 
-Price vs Cut, Color, Clarity
+**Evaluation Metrics Used**
+- MAE
+- RMSE
+- R² Score
 
-Carat vs Price relationship
+---
 
-Correlation heatmap
+## 🧩 Clustering – Market Segmentation
 
-Pairwise feature relationships
+- Algorithm: K-Means
+- Data scaled using StandardScaler
+- Optimal clusters selected using Elbow Method
+- PCA used for 2D visualization
 
-🧩 Feature Engineering
+### Cluster Names
 
-New features created:
+| Cluster Name | Description |
+|-------------|------------|
+| Affordable Small Diamonds | Low carat, budget-friendly |
+| Mid-range Balanced Diamonds | Medium size and price |
+| Premium Heavy Diamonds | High carat, luxury diamonds |
 
-Volume = x × y × z
+---
 
-Price per Carat
+## 🌐 Streamlit Web Application
 
-Dimension Ratio
+### App Features
 
-Carat Category (Light / Medium / Heavy)
+- Price prediction in INR
+- Market segment prediction
+- Preset diamond profiles
+- Downloadable prediction report
+- Clean and interactive UI
 
-🎯 Feature Selection
+### Run the App
 
-Used Random Forest Feature Importance to identify the most impactful features for price prediction.
-
-🤖 Regression Models Used
-Model	Purpose
-Linear Regression	Baseline model
-Decision Tree	Non-linear modeling
-Random Forest	Best performing model
-KNN	Instance-based learning
-XGBoost	Gradient boosting
-ANN (Neural Network)	Deep learning comparison
-
-Evaluation Metrics: MAE, RMSE, R² Score
-
-🧩 Clustering (Market Segmentation)
-
-Algorithm: K-Means
-
-Features scaled using StandardScaler
-
-Optimal clusters chosen using Elbow Method
-
-PCA used for 2D cluster visualization
-
-Cluster Labels
-Cluster Name	Description
-💍 Affordable Small Diamonds	Low carat, budget stones
-✨ Mid-range Balanced Diamonds	Moderate size & price
-👑 Premium Heavy Diamonds	High carat, luxury stones
-🌐 Streamlit Web Application
-Features
-
-✔ Price Prediction
-✔ Market Segment Prediction
-✔ Preset Diamond Profiles
-✔ Downloadable Prediction Report
-✔ Clean & Interactive UI
-
-▶ Run the App
-streamlit run app.py
-		
 📁 Project Structure
-diamond-dynamics/
+diamond-dynamics-ml/
 │
 ├── data/
 │   └── diamonds.csv
@@ -163,9 +170,9 @@ Dynamic pricing for diamond retailers
 
 Inventory segmentation
 
-Luxury recommendation systems
+Luxury goods recommendation systems
 
-Customer targeting & marketing
+Customer targeting and personalization
 
 🛠 Tech Stack
 
@@ -185,5 +192,7 @@ Streamlit
 
 👤 Author
 
-Your Name Here
-Machine Learning Enthusiast 💎
+Sathish Kumar CB
+Machine Learning Enthusiast
+```bash
+streamlit run app.py
