@@ -138,7 +138,7 @@ Features
 
 ▶ Run the App
 streamlit run app.py
-
+		
 📁 Project Structure
 diamond-dynamics/
 │
