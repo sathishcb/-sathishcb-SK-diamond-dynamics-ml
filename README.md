@@ -146,9 +146,7 @@ The following models were trained and evaluated:
 
 ### Run the App
 
-📁 Project Structure
-
-    
+📁 Project Structure			
 diamond-dynamics-ml/
 │
 ├── data/
